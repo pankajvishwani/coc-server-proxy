@@ -1,0 +1,19 @@
+{
+  "name": "coc-server-proxy",
+  "version": "1.0.0",
+  "description": "Clash of clans proxy server using Google Compute Engine",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pankajvishwani/coc-server-proxy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pankajvishwani/coc-server-proxy/issues"
+  },
+  "homepage": "https://github.com/pankajvishwani/coc-server-proxy#readme"
+}
