@@ -37,9 +37,8 @@ app.get('/', function(req, res){
 	});
 	var uri = query.url.replace(/#/g, "%23");
 	console.info("uri: ", uri);
-	axios.get(uri, params).then(payload => {
-		console.info("payload: ", payload);
-		sendResponse(res, payload, status);
+	axios.get(uri, params).then(response => {
+		sendResponse(res, response.data, status);
 	}).catch(err => {
 		console.info("err: ", err);
 		status = 404;
