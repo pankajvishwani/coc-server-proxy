@@ -1,11 +1,9 @@
 # coc-server-proxy
-To use Clash of Clans API, developers need to have a server with static IP Address. This package helps developers to quickly setup a VM(proxy server) on Google Compute Engine with static external IP Address and run a nodejs server that will then make calls to Clash of Clans API server. Developers can make calls this VM for localhost/production.
+To use Clash of Clans API, developers need to have a server with static IP Address. This package helps developers to quickly setup a VM(proxy server) on Google Compute Engine with static external IP Address and run a nodejs server that will then make calls to Clash of Clans API server. Developers can make calls to this VM from localhost/production server.
 
 # Google Compute Engine Setup
 Go to: https://console.cloud.google.com/compute/instances and create a new instance.
-Go to: https://console.cloud.google.com/networking/addresses/list
-Change type from "Ephemeral" to "Static"
-Copy "External Address" of your VM and create a new key using this IP Address within your Clash of Clans account: https://developer.clashofclans.com/#/account
+Go to: https://console.cloud.google.com/networking/addresses/list and change type from "Ephemeral" to "Static". Copy "External Address" of your VM and create a new key using this IP Address within your Clash of Clans account here: https://developer.clashofclans.com/#/account
 
 SSH in your instance and run the following commands:
 ```
