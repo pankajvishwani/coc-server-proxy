@@ -42,7 +42,11 @@ app.get('/', function(req, res){
 	axios.get(uri, params).then(response => {
 		sendResponse(res, response.data, status);
 	}).catch(err => {
-		console.info("err: ", err.response.data);
+		var errorData = err.response.data;
+		console.info("err: ", errorData);
+		if(errorData && errorData.reason && errorData.reason === "accessDenied"){
+			console.info("Most likely you did not update config.json file with your Clash of clans token properly. Please update coc_token and restart this server.")
+		}
 		status = 404;
 		data = {
 			message: "This page does not exists.",
