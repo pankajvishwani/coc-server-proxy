@@ -44,8 +44,12 @@ app.get('/', function(req, res){
 	}).catch(err => {
 		var errorData = err.response.data;
 		console.info("err: ", errorData);
-		if(errorData && errorData.reason && errorData.reason === "accessDenied"){
-			console.info("Most likely you did not update config.json file with your Clash of clans token properly. Please update coc_token and restart this server.")
+		if(errorData && errorData.reason){
+			if(errorData.reason === "accessDenied"){
+				console.info("Most likely you did not update config.json file with your Clash of clans token properly. Please update coc_token and restart this server.");
+			}else if(errorData.reason === "accessDenied.invalidIp"){
+				console.info("IP Address for the token defined within config.json does not match this server's external IP Address. Please update coc_token and restart this server.");
+			}
 		}
 		status = 404;
 		data = {
