@@ -1,5 +1,6 @@
 {
 	"compute_access_token": "my-compute-private-token",
 	"allowed_origins": "*",
-	"coc_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6ImIwNGJlNGEyLWM4MDgtNGZiYS04ZGNhLTVmZTM5NjM1N2NkNCIsImlhdCI6MTUxNzA4OTE4NSwic3ViIjoiZGV2ZWxvcGVyL2I2YzkwMTQxLWY4ZWQtN2E3Ni1iZDU3LTZiZWIxMDQ3MDY5NyIsInNjb3BlcyI6WyJjbGFzaCJdLCJsaW1pdHMiOlt7InRpZXIiOiJkZXZlbG9wZXIvc2lsdmVyIiwidHlwZSI6InRocm90dGxpbmcifSx7ImNpZHJzIjpbIjM1LjIyOS4xOS4xNDAiXSwidHlwZSI6ImNsaWVudCJ9XX0.B-Ydhh_XdOwJ_Q7Roas3P8YCBvmhWBvfxTTMHydRLnKumKxj5BtPzlgFmedF9DDbPYkY84-7BDdpfH4HQBNgag"
+	"coc_api_version": "v1",
+	"coc_token": "your-coc-token"
 }

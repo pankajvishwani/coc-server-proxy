@@ -4,7 +4,7 @@ var app = express();
 var config = require("./config.json");
 var axios = require("axios");
 
-axios.defaults.baseURL = "https://api.clashofclans.com/v1";
+axios.defaults.baseURL = "https://api.clashofclans.com/" + config.coc_api_version;
 axios.defaults.headers.common['Authorization'] = "Bearer " + config.coc_token;
 axios.defaults.headers.common['Accept'] = 'application/json';
 
@@ -36,7 +36,9 @@ app.get('/', function(req, res){
 		params[key] = query[key];
 	});
 	var uri = query.url.replace(/#/g, "%23");
-	console.info("uri: ", uri);
+	console.info("Clash Of Clans API: ");
+	console.info("URL: ", uri);
+	console.info("params: ", params);
 	axios.get(uri, params).then(response => {
 		sendResponse(res, response.data, status);
 	}).catch(err => {
