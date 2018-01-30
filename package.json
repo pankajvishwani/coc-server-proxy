@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "PORT=3050 PRIVATE_TOKEN=my-private-token node server.js"
+    "start": "sudo PORT=80 PRIVATE_TOKEN=my-private-token node server.js"
   },
   "dependencies": {
     "axios": "^0.17.1",

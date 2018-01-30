@@ -16,6 +16,7 @@ app.use(function(req, res, next) {
 
 app.get('/', function(req, res){
 	var query = req.query;
+	console.info("query: ", query);
 	var data = {};
 	var status = 200;
 	if(!query.token || query.token !== config.compute_access_token || !query.url){
@@ -34,8 +35,7 @@ app.get('/', function(req, res){
 		}
 		params[key] = query[key];
 	});
-	console.info("making axios call ==> ", query.url);
-	axios.get(query.url, params).then(payload => {
+	axios.get(encodeURIComponent(query.url), params).then(payload => {
 		sendResponse(res, payload, status);
 	}).catch(err => {
 		status = 404;
