@@ -42,9 +42,12 @@ app.get('/', function(req, res){
 	axios.get(uri, params).then(response => {
 		sendResponse(res, response.data, status);
 	}).catch(err => {
-		console.info("err: ", err);
+		console.info("err: ", err.response.data);
 		status = 404;
-		data = err.response.data;
+		data = {
+			message: "This page does not exists.",
+			error: {}
+		};
 		sendResponse(res, data, status);
 	});
 });
